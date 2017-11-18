@@ -10,7 +10,7 @@ print('\n')
 
 
 def crawl_pages(max_page):
-    for n in range(1,max_page+1):
+    for n in range(1, max_page+1):
         if n < 2:
             url = base
         else:
@@ -72,11 +72,6 @@ def get_rt_scores(movie_title):
             audience_score = audience[1] + "." + audience[2:-2]
 
             avg_score = str(((float(critic_score) + float(audience_score)) / 2))
-
-            # print "\nTomatometer: " + critic_score
-            # print "Audience score: " + audience_score
-            #
-            # print "\nCalculated score: " + avg_score
 
             return ["Critics: "+str(critic_score), "Audience: "+ str(audience_score), "Average: " + avg_score]
         except:
